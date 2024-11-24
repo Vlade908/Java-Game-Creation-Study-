@@ -13,10 +13,7 @@ public class Block extends Rectangle {
 	}
 	
 	public void render(Graphics g) {
-		//g.drawImage(null, x, y, tamBloco, tamBloco, null);
-		g.setColor(Color.red);
-		g.fillRect(x, y, width, height);
-		g.setColor(Color.black);
-		g.drawRect(x, y, width, height);
+		g.drawImage(Spritesheet.Block_stone_wall, x, y, tamBloco, tamBloco, null);
+		
 	}
 }

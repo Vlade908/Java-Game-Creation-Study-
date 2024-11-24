@@ -7,8 +7,8 @@ import java.util.List;
 
 public class World {
 	public static List<Block> blocos = new ArrayList<Block>();
-	public static int telaWid= Game.WIDTH;
-	public static int telaHei= Game.HEIGHT;
+	public static int telaWid= (Game.WIDTH);
+	public static int telaHei= (Game.HEIGHT);
 	public static int tamBloco= Block.tamBloco;
 	public static int tamPlayer= Player.PlayerTam;
 
@@ -18,14 +18,14 @@ public class World {
 		}
 		
 		for(int xx = 0; xx < (telaWid/tamBloco); xx++) {
-			blocos.add(new Block(xx*tamBloco,telaWid-tamBloco));
+			blocos.add(new Block(xx*tamBloco,telaHei-tamBloco));
 		}
 		
-		for(int yy = 0; yy < (telaWid/tamBloco); yy++) {
+		for(int yy = 0; yy < (telaHei/tamBloco); yy++) {
 			blocos.add(new Block(0, yy*tamBloco));
 		}
 		
-		for(int yy = 0; yy < (telaWid/tamBloco); yy++) {
+		for(int yy = 0; yy < (telaHei/tamBloco); yy++) {
 			blocos.add(new Block(telaWid-tamBloco, yy*tamBloco));
 		}
 	}
